@@ -21,7 +21,7 @@ const Cart = props => {
         <span> Total Amount </span>
         <span>{amount.toFixed(2)}</span>
         <div className={classes.actions}>
-            <button className={classes.button}>place Order</button>
+            <button className={classes.button} onClick={cartctx.removeItemFromCart}>place Order</button>
             <button className={classes['button--alt']} onClick={props.onClose}>Cancel</button>
 
         </div>

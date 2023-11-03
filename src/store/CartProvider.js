@@ -4,6 +4,7 @@ import { useState } from "react";
 import CartContext from "./cart-context";
 
 
+
 const CartProvider = (props) => {
 
     const [items,setItems]=useState([])
@@ -35,7 +36,7 @@ const CartProvider = (props) => {
     }
 
     const removingItemFromCart=(id)=>{
-
+        setItems([]);
     }
 
     const updatingItemFromCart=(id)=>{
@@ -44,7 +45,7 @@ const CartProvider = (props) => {
     const cartContext = {
 
         items: items || [],
-        totalAmount: 0,
+        // totalAmount: 0,
         addItemToCart: addingItemToCart,
         removeItemFromCart: removingItemFromCart,
         updateItemFromCart: updatingItemFromCart
